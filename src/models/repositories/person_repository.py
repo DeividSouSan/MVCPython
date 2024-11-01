@@ -17,8 +17,6 @@ class PersonRepository:
                 raise Exception('Nome já cadastrado!')
         
         self.__persons.append(new_person)
-        print("->", self.__persons)
-        input()
         
     def find_by_name(self, name: str) -> Person:
         """Busca uma pessoa no banco de dados por nome.

@@ -5,7 +5,7 @@ class RegisterPersonView:
     @staticmethod
     def index() -> dict:
         clear_screen()
-        print("Cadastrando Pesoa".center(50, '-'))
+        print("Cadastrando Pessoa".center(50, '-'))
 
         person = {
             'name': input('Nome: '),
@@ -20,7 +20,7 @@ class RegisterPersonView:
         clear_screen()
 
         message = f'''
-            Pessoa cadastradas com sucesso.
+            Pessoa cadastrada com sucesso!
 
             Tipo: {response["type"]}
             Quantidade: {response["count"]}
