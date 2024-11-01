@@ -1,2 +1,5 @@
 /.vscode
 /improvements.txt
+**/.venv
+**/__pycache__
+**/.env
