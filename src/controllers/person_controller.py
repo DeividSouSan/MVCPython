@@ -1,4 +1,5 @@
 from src.models.entities.person import Person
+from src.models.entities.phone import Phone
 from src.models.repositories.person_repository import repository
 
 
@@ -21,7 +22,7 @@ class PersonController:
         try:
             name, age, phone = person_data.values()
             
-            person = Person(name, age, phone)
+            person = Person(name, age, Phone(phone))
 
             self.__repository.add(person)
 
