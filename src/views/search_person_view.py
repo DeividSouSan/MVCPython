@@ -15,17 +15,14 @@ class SearchPersonView:
         clear_screen()
 
         person_data: dict = response["attributes"]
-        phone_data: dict = person_data["phone"].__dict__
+        
         message = f'''
             Pessoa foi encontrada no sistema.
 
             Dados:
                 Nome: {person_data["name"]}
                 Idade: {person_data["age"]}
-                WhatsApp:
-                    Número: {phone_data["number"]}
-                    Válido: {"Sim" if phone_data["info"]["valid"] else "Não"}
-                    País: {phone_data["info"]["country"]}
+                WhatsApp: {person_data["phone"]}
         ''' 
 
         print(message)

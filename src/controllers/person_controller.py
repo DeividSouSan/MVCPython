@@ -4,10 +4,21 @@ from src.models.repositories.person_repository import repository
 
 
 class PersonController:
+    """Classe responsável por controlar as ações relacionadas a entidade Person.
+    
+    """
     def __init__(self) -> None:
         self.__repository = repository
 
     def register(self, person_data: dict) -> dict:
+        """Método responsável por registrar uma nova pessoa no sistema.
+
+        Args:
+            person_data (dict): Dicionário contendo os dados da pessoa.
+
+        Returns:
+            dict: Dicionário contendo a resposta da requisição.
+        """
         try:
             name, age, phone = person_data.values()
             
